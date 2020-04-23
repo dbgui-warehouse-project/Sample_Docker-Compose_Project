@@ -1,6 +1,6 @@
 //get all family safe items
 router.get('/getit/inventory',function(req,res){
-        con.query('SELECT * FROM inventory WHERE Familysafe = TRUE',function(err,result,fields){
+        con.query('SELECT * FROM inventory WHERE familySafe = TRUE',function(err,result,fields){
           if(err) throw err;
           res.end(JSON.stringify(result));
    });
@@ -37,8 +37,8 @@ router.get('getit/inventory',function(req,res){
 
 //get all items in a certain category
 router.get('/getit/inventory',function(req,res){
-      var category = req.param('category');
-      con.query('SELECT * FROM inventory WHERE category = ?',function(err,result,fields){
+      var category = req.param('itemType');
+      con.query('SELECT * FROM inventory WHERE itemType = ?',function(err,result,fields){
          if(err) throw err;
          res.end(JSON.stringify(result));
       });
