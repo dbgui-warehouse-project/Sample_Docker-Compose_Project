@@ -116,7 +116,7 @@ export class NewUser extends React.Component {
 
           </div>
 
-          <div>
+          <div className="row">
             <button type="button" className="btn btn-primary col" onClick={() => this.createUser()}>Create New User</button>
             <Link to='/login' className="btn btn-primary col">Cancel</Link>
           </div>

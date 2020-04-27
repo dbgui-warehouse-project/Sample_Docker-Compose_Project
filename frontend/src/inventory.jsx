@@ -166,7 +166,7 @@ export class Inventory extends React.Component {
             onClick={() => this.onSearch()}>Search</button>
 
           <div>Filter</div>
-          <div className="container">
+          <div className="container row">
             <button type="button" className="btn btn-primary col" onClick={() => this.familySafe()}>View Family Safe Items</button>
             <button type="button" className="btn btn-primary col" onClick={() => this.package()}>View Packageable Items</button>
             <button type="button" className="btn btn-primary col" onClick={() => this.priceasc()}>Price: Low to High</button>
@@ -188,7 +188,6 @@ export class Inventory extends React.Component {
               <option value="COVID">COVID</option>
             </select>
             <button type="button" className="btn btn-primary col" onClick={() => this.getType()}>Apply Tag</button>
-
           </div>
         </form>
 

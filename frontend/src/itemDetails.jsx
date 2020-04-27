@@ -154,9 +154,9 @@ export class ItemDetails extends React.Component {
                         </div>
                     </div>
 
-                    <div>
-                        <Link to='/inventory'><button type="button" className="btn btn-primary col" onClick={() => this.addToInventory()}>Submit</button></Link>
-                        <Link to='/inventory'><button type="button" className="btn btn-primary col">Cancel</button></Link>
+                    <div className="row">
+                        <Link to='/inventory'><button type="button" className="btn btn-primary" onClick={() => this.addToInventory()}>Submit</button></Link>
+                        <Link to='/inventory'><button type="button" className="btn btn-primary">Cancel</button></Link>
                     </div>
 
                 </div>

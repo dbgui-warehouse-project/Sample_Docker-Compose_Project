@@ -138,7 +138,7 @@ export class SettingsForm extends React.Component {
             </div>
           </div>
           
-          <div>
+          <div className="row">
             <button type="button" className="btn btn-primary col" onClick={() => this.updateProfile()}>Save</button>
             <Link to='/inventory' className="btn btn-primary col">Return</Link>
           </div>

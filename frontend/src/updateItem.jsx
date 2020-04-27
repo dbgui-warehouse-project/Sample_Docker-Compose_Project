@@ -139,7 +139,7 @@ export class UpdateItem extends React.Component {
             </div>
           </div>
 
-          <div>
+          <div className="row">
             <button type="button" className="btn btn-primary col" onClick={() => this.update()}>Save</button>
             <Link to='/inventory' className="btn btn-primary col">Return</Link>
           </div>

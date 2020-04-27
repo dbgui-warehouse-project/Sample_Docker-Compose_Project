@@ -73,9 +73,9 @@ export class Login extends React.Component {
             onChange={e => this.setState({ password: e.target.value })}
           />
         </div>
-        <div>
-        <button type="button" className="btn btn-primary col" onClick={() => this.login()}>Login</button>
-        <div><Link to='newuser'><button type="button" className="btn btn-primary col">Create account</button></Link></div>
+        <div className="row">
+          <button type="button" className="btn btn-primary col" onClick={() => this.login()}>Login</button>
+          <Link to='newuser' className="btn btn-primary col">Create account</Link>
         </div>
 
 
