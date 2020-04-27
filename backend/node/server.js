@@ -249,7 +249,7 @@ app.get('/search', (req, res) => {
 //RETURNS ITEMS THAT NEED TO BE RESTOCKED
 app.get('/restock', (req, res) => {
 
-	connection.query("select * from inventory WHERE numInStock < 10", function (err, rows, fields) {
+	connection.query("select itemID,itemName, numInStock from inventory WHERE numInStock < 5", function (err, rows, fields) {
     if (err) {
       logger.error("Error while executing Query for inventory");
       res.status(400).json({
@@ -409,7 +409,7 @@ app.post('/orders', function (req, res) {
 });
 
 //ADD AN ITEM TO AN EXISTING ORDER
-app.post('/orderdetails', function (req, res) {
+app.post('/orderDetails', function (req, res) {
 	var orderID = req.param('orderID');
 	var itemID = req.param('itemID');
 	var quantity = req.param('quantity');

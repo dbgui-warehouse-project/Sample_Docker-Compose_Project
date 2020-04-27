@@ -16,8 +16,10 @@ export class Inventory extends React.Component {
   constructor(props){
     super(props);
     {this.getInventory()}
+    {this.restock()}
     this.state = {
-      values: []
+      values: [],
+      restock:[]
     };
   }
   getInventory () {
@@ -117,9 +119,9 @@ export class Inventory extends React.Component {
         }
         ).then(
           res => {
-            const values = res.data;
-            console.log(values.data);
-            this.setState({values:values.data})
+            const restock = res.data;
+            console.log(restock.data);
+            this.setState({restock:restock.data})
           });
       }
 
@@ -127,6 +129,19 @@ export class Inventory extends React.Component {
     return (
       <>
       <h1 id = "header">Inventory</h1>
+      <div>
+      <p>You need to restock the following items:</p>
+      <ul>
+        <GeneralTable
+        items={this.state.restock}
+        tableClass="table table-bordered table-hover table-sm"
+        emptyMessage="No items to restock"
+        emptyClass="alert alert-primary"
+        showRowHeader={true}
+        />
+      </ul>
+      </div>
+
       <div>
       <Link to='/warehouseProfile'><button type="button" className="btn btn-primary" >Warehouse Profile</button></Link>
       <Link to='/login'><button type="button" className="btn btn-primary" >Logout</button></Link>
@@ -176,7 +191,6 @@ export class Inventory extends React.Component {
                   <button type="button" className="btn btn-primary" onClick={ () => this.package()}>View Packageable Items</button>
                   <button type="button" className="btn btn-primary" onClick={ () => this.priceasc()}>Price: Low to High</button>
                   <button type="button" className="btn btn-primary" onClick={ () => this.pricedesc()}>Price: High to Low</button>
-                  <button type="button" className="btn btn-primary" onClick={ () => this.restock()}>Items to Restock</button>
                   <button type="button" className="btn btn-primary" onClick={ () => this.getInventory()}>View Full Inventory</button>
       </form>
       <ul>
