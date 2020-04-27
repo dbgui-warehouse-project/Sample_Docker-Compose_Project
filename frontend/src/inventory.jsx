@@ -142,13 +142,10 @@ export class Inventory extends React.Component {
       </ul>
       </div>
 
-      <div>
+      <div className="container">
       <Link to='/warehouseProfile'><button type="button" className="btn btn-primary" >Warehouse Profile</button></Link>
       <Link to='/login'><button type="button" className="btn btn-primary" >Logout</button></Link>
       <Link to='/orders'><button type="button" className="btn btn-primary">Orders</button></Link>
-      </div>
-
-      <div>
       <Link to='/itemDetails'><button type="button" className="btn btn-primary">Add Item to Warehouse</button></Link>
       <Link to='/update'><button type="button" className="btn btn-primary">Update Item</button></Link>
       </div>
@@ -168,31 +165,33 @@ export class Inventory extends React.Component {
               className="btn btn-primary"
               onClick={() => this.onSearch() }>Search</button>
 
-          <div className="form-group col">
-              <label htmlFor="itemType">Filter by Item Type</label>
-              <select
-                  id="itemType"
-                  name="itemType"
-                  className="form-control"
-                  value={this.state.itemType}
-                  onChange={e => this.setState({ itemType: e.target.value })}>
-                      <option value="Unspecified"></option>
-                      <option value="Living">Living</option>
-                      <option value="Bedroom">Bedroom</option>
-                      <option value="Dining">Dining</option>
-                      <option value="Office">Office</option>
-                      <option value="Outdoor">Outdoor</option>
-                      <option value="Storage">Storage</option>
-                      <option value="COVID">COVID</option>
-                  </select>
-                  <button type="button" className="btn btn-primary" onClick={ () => this.getType()}>Apply Filter</button>
-                  </div>
-                  <button type="button" className="btn btn-primary" onClick={ () => this.familySafe()}>View Family Safe Items</button>
+          <div>Filter</div>
+
+          <button type="button" className="btn btn-primary" onClick={ () => this.familySafe()}>View Family Safe Items</button>
                   <button type="button" className="btn btn-primary" onClick={ () => this.package()}>View Packageable Items</button>
                   <button type="button" className="btn btn-primary" onClick={ () => this.priceasc()}>Price: Low to High</button>
                   <button type="button" className="btn btn-primary" onClick={ () => this.pricedesc()}>Price: High to Low</button>
                   <button type="button" className="btn btn-primary" onClick={ () => this.getInventory()}>View Full Inventory</button>
+                  <div className="form-group col">
+                      <select
+                          id="itemType"
+                          name="itemType"
+                          className="form-control"
+                          value={this.state.itemType}
+                          onChange={e => this.setState({ itemType: e.target.value })}>
+                              <option value="Unspecified"></option>
+                              <option value="Living">Living</option>
+                              <option value="Bedroom">Bedroom</option>
+                              <option value="Dining">Dining</option>
+                              <option value="Office">Office</option>
+                              <option value="Outdoor">Outdoor</option>
+                              <option value="Storage">Storage</option>
+                              <option value="COVID">COVID</option>
+                          </select>
+                          <button type="button" className="btn btn-primary" onClick={ () => this.getType()}>Apply Filter</button>
+</div>
       </form>
+
       <ul>
         <GeneralTable
         items={this.state.values}

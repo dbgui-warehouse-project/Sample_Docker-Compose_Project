@@ -87,6 +87,13 @@ export class Orders extends React.Component{
               <button type="button" className="btn btn-primary" onClick={ () => this.getOrderDetails()} >View Details</button>
 
           <GeneralTable
+              items={this.state.customer}
+              tableClass="table table-bordered table-hover table-sm"
+              emptyMessage=""
+              emptyClass="alert alert-primary"
+              showRowHeader={false}
+              />
+          <GeneralTable
           items={this.state.details}
           tableClass="table table-bordered table-hover table-sm"
           emptyMessage=""
@@ -94,13 +101,7 @@ export class Orders extends React.Component{
           showRowHeader={true}
           />
 
-          <GeneralTable
-          items={this.state.customer}
-          tableClass="table table-bordered table-hover table-sm"
-          emptyMessage=""
-          emptyClass="alert alert-primary"
-          showRowHeader={false}
-          />
+
 
           </form>
         );
