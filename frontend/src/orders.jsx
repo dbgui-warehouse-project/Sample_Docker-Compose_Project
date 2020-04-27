@@ -76,15 +76,19 @@ export class Orders extends React.Component {
           showRowHeader={true}
         />
 
-        <p>Order ID:</p>
-        <input type="text"
-          id="orderID"
-          name="orderID"
-          className="form-control"
-          value={this.state.orderID}
-          onChange={e => this.setState({ orderID: e.target.value })}
-        />
-        <button type="button" className="btn btn-primary" onClick={() => this.getOrderDetails()} >View Details</button>
+        <div className="row">
+          <div className="form-group">
+            <label for="orderID">Order ID</label>
+            <input type="text"
+              id="orderID"
+              name="orderID"
+              className="form-control col"
+              value={this.state.orderID}
+              onChange={e => this.setState({ orderID: e.target.value })}
+            />
+          </div>
+          <button type="button" className="btn btn-primary col" onClick={() => this.getOrderDetails()}>View Details</button>
+        </div>
 
         <GeneralTable
           items={this.state.customer}

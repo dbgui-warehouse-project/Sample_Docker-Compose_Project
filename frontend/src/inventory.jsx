@@ -151,19 +151,21 @@ export class Inventory extends React.Component {
         </div>
 
         <form class="4">
-          <div class="form-group">
-            <label for="textInput">Search</label>
-            <input type="text"
-              className="form-control"
-              id="textInput"
-              placeholder="Item name or keyword"
-              value={this.state.searchText}
-              onChange={e => this.setState({ searchText: e.target.value })}
-            ></input>
+          <div className="row">
+            <div className="form-group">
+              <label for="textInput">Search</label>
+              <input type="text"
+                className="form-control col"
+                id="textInput"
+                placeholder="Item name or keyword"
+                value={this.state.searchText}
+                onChange={e => this.setState({ searchText: e.target.value })}
+              ></input>
+            </div>
+            <button type="button"
+              className="btn btn-primary col"
+              onClick={() => this.onSearch()}>Search</button>
           </div>
-          <button type="button"
-            className="btn btn-primary"
-            onClick={() => this.onSearch()}>Search</button>
 
           <div>Filter</div>
           <div className="container row">
