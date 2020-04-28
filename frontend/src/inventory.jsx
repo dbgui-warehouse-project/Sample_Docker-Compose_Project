@@ -151,11 +151,11 @@ export class Inventory extends React.Component {
         </div>
 
         <form class="4">
+          <label for="textInput">Search</label>
           <div className="row">
             <div className="form-group">
-              <label for="textInput">Search</label>
               <input type="text"
-                className="form-control col"
+                className="form-control col-9"
                 id="textInput"
                 placeholder="Item name or keyword"
                 value={this.state.searchText}
@@ -163,7 +163,7 @@ export class Inventory extends React.Component {
               ></input>
             </div>
             <button type="button"
-              className="btn btn-primary col"
+              className="btn btn-primary col-3"
               onClick={() => this.onSearch()}>Search</button>
           </div>
 
