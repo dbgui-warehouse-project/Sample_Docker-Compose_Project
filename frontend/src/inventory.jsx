@@ -153,9 +153,9 @@ export class Inventory extends React.Component {
         <form class="4">
           <label for="textInput">Search</label>
           <div className="row">
-            <div className="form-group">
+            <div className="form-group col-9">
               <input type="text"
-                className="form-control col-9"
+                className="form-control"
                 id="textInput"
                 placeholder="Item name or keyword"
                 value={this.state.searchText}

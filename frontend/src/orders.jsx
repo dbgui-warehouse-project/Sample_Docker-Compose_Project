@@ -78,11 +78,11 @@ export class Orders extends React.Component {
 
         <label for="orderID">Order ID</label>
         <div className="row">
-          <div className="form-group">
+          <div className="form-group col-9">
             <input type="text"
               id="orderID"
               name="orderID"
-              className="form-control col-9"
+              className="form-control"
               value={this.state.orderID}
               onChange={e => this.setState({ orderID: e.target.value })}
             />
