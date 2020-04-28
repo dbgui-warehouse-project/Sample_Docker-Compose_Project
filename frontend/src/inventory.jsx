@@ -169,11 +169,11 @@ export class Inventory extends React.Component {
 
           <div>Filter</div>
           <div className="container row">
-            <button type="button" className="btn btn-primary col" onClick={() => this.familySafe()}>View Family Safe Items</button>
-            <button type="button" className="btn btn-primary col" onClick={() => this.package()}>View Packageable Items</button>
+            <button type="button" className="btn btn-primary col" onClick={() => this.familySafe()}>Family Safe</button>
+            <button type="button" className="btn btn-primary col" onClick={() => this.package()}>Packageable</button>
             <button type="button" className="btn btn-primary col" onClick={() => this.priceasc()}>Price: Low to High</button>
             <button type="button" className="btn btn-primary col" onClick={() => this.pricedesc()}>Price: High to Low</button>
-            <button type="button" className="btn btn-primary col" onClick={() => this.getInventory()}>View Full Inventory</button>
+            <button type="button" className="btn btn-primary col" onClick={() => this.getInventory()}>Full Inventory</button>
             <select
               id="itemType"
               name="itemType"

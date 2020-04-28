@@ -133,7 +133,7 @@ export class ItemDetails extends React.Component {
                         </div>
 
                         <div className="form-group col">
-                            <label htmlFor="availableToPackage">Package Available (yes/no)</label>
+                            <label htmlFor="availableToPackage">Package? (yes/no)</label>
                             <input type="text"
                                 id="availableToPackage"
                                 name="availableToPackage"
@@ -155,8 +155,8 @@ export class ItemDetails extends React.Component {
                     </div>
 
                     <div className="row">
-                        <Link to='/inventory'><button type="button" className="btn btn-primary" onClick={() => this.addToInventory()}>Submit</button></Link>
-                        <Link to='/inventory'><button type="button" className="btn btn-primary">Cancel</button></Link>
+                        <Link to='/inventory' className="btn btn-primary col" onClick={() => this.addToInventory()}>Submit</Link>
+                        <Link to='/inventory' className="btn btn-primary col">Return</Link>
                     </div>
 
                 </div>

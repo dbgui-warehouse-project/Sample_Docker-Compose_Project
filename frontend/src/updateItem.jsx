@@ -106,7 +106,7 @@ export class UpdateItem extends React.Component {
                 value={this.state.price}
                 onChange={e => this.setState({ price: e.target.value })} />
             </div>
-            
+
             <div className="form-group col">
               <label htmlFor="state">Family Safe (yes/no)</label>
               <input type="text"
@@ -118,7 +118,7 @@ export class UpdateItem extends React.Component {
             </div>
 
             <div className="form-group col">
-              <label htmlFor="availableToPackage">Package Available (yes/no)</label>
+              <label htmlFor="availableToPackage">Package? (yes/no)</label>
               <input type="text"
                 id="availableToPackage"
                 name="availableToPackage"
