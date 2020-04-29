@@ -1,3 +1,4 @@
+--Initialize Warehouse Database
 -- Users table
 CREATE TABLE `db`.`users` (
 `userID` int NOT NULL AUTO_INCREMENT,
