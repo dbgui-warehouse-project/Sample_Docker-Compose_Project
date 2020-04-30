@@ -90,8 +90,9 @@ app.post('/inventory', (req, res) => {
 	var itemType = req.body.itemType;
 	var familySafe = req.body.familySafe;
 	var availableToPackage = req.body.availableToPackage;
+  var timeToAssemble = req.body.timeToAssemble;
 
-  connection.query("INSERT INTO inventory(itemName, itemDescription, numInStock, price, itemType, familySafe, availableToPackage) VALUES (?,?,?,?,?,?,?)", [itemName, itemDescription, numInStock, price, itemType, familySafe, availableToPackage], function (err, rows, fields) {
+  connection.query("INSERT INTO inventory(itemName, itemDescription, numInStock, price, itemType, familySafe, availableToPackage, timeToAssemble) VALUES (?,?,?,?,?,?,?,?)", [itemName, itemDescription, numInStock, price, itemType, familySafe, availableToPackage, timeToAssemble], function (err, rows, fields) {
     if (err){
       logger.error("Problem inserting into inventory table");
     }
