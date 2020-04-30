@@ -41,9 +41,11 @@ export class Orders extends React.Component {
       res => {
         const details = res.data;
         console.log(details.data);
-        this.setState({ details: details.data })
+        if(details.data.length>0)
+        {this.setState({ details: details.data })
+        this.getCustomerDetails()
+        }
       });
-    this.getCustomerDetails()
     this.setState({ display: "yes" })
   }
 
