@@ -50,7 +50,7 @@ export class Orders extends React.Component {
   getCustomerDetails() {
     axios.get('http://localhost:8000/customer', {
       params: {
-        customerID: this.state.values[this.state.orderID - 1].customerID
+        customerID: this.state.values[this.state.values.length-this.state.orderID].customerID
       }
     }
     ).then(
@@ -76,7 +76,7 @@ export class Orders extends React.Component {
           showRowHeader={true}
         />
 
-        <label for="orderID">Order ID</label>
+        <label for="orderID">Order ID:</label>
         <div className="row">
           <div className="form-group col-9">
             <input type="text"
